@@ -1,0 +1,12 @@
+﻿<h3>Version 01.00.00</h3>
+<p>This is the initial release, based on <a href="http://adefhelpdesk.codeplex.com" target="_blank">ADefHelpDesk 2.11</a> code with some changes.</p>
+<ul>
+	<li>Added more MIME types for attached documents.</li>
+	<li>Fixed attached files download problem.</li>
+	<li>Fix compiling problems against DNN Platform 7.</li>
+	<li>Better localization support.</li>
+	<li>Added russian localization.</li>
+	<li>Get rid App_Code dir.</li>
+	<li>Make module precompiled.</li>
+	<li>Other small changes and improvements.</li>
+</ul>

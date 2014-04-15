@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="HelpDesk" EntityNamespace="R7.HelpDesk" ContextNamespace="R7.HelpDesk" Class="HelpDeskDALDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(local);Initial Catalog=HelpDesk;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SiteSqlServer" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.HelpDesk_Log" Member="HelpDesk_Logs">
+    <Type Name="HelpDesk_Log">
+      <Column Name="LogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LogDescription" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HelpDesk_Task_HelpDesk_Log" Member="HelpDesk_Task" ThisKey="TaskID" OtherKey="TaskID" Type="HelpDesk_Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_Settings" Member="HelpDesk_Settings">
+    <Type Name="HelpDesk_Setting">
+      <Column Name="SettingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PortalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SettingName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="SettingValue" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_TaskAssociations" Member="HelpDesk_TaskAssociations">
+    <Type Name="HelpDesk_TaskAssociation">
+      <Column Name="TaskRelationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AssociatedID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HelpDesk_Task_HelpDesk_TaskAssociation" Member="HelpDesk_Task" ThisKey="TaskID" OtherKey="TaskID" Type="HelpDesk_Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_TaskCategories" Member="HelpDesk_TaskCategories">
+    <Type Name="HelpDesk_TaskCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HelpDesk_Category_HelpDesk_TaskCategory" Member="HelpDesk_Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="HelpDesk_Category" IsForeignKey="true" />
+      <Association Name="HelpDesk_Task_HelpDesk_TaskCategory" Member="HelpDesk_Task" ThisKey="TaskID" OtherKey="TaskID" Type="HelpDesk_Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_TaskDetails" Member="HelpDesk_TaskDetails">
+    <Type Name="HelpDesk_TaskDetail">
+      <Column Name="DetailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DetailType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StopTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="HelpDesk_TaskDetail_HelpDesk_Attachment" Member="HelpDesk_Attachments" ThisKey="DetailID" OtherKey="DetailID" Type="HelpDesk_Attachment" />
+      <Association Name="HelpDesk_Task_HelpDesk_TaskDetail" Member="HelpDesk_Task" ThisKey="TaskID" OtherKey="TaskID" Type="HelpDesk_Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_Categories" Member="HelpDesk_Categories">
+    <Type Name="HelpDesk_Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PortalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequestorVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Selectable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="HelpDesk_Category_HelpDesk_TaskCategory" Member="HelpDesk_TaskCategories" ThisKey="CategoryID" OtherKey="CategoryID" Type="HelpDesk_TaskCategory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_Attachments" Member="HelpDesk_Attachments">
+    <Type Name="HelpDesk_Attachment">
+      <Column Name="AttachmentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DetailID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AttachmentPath" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="OriginalFileName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HelpDesk_TaskDetail_HelpDesk_Attachment" Member="HelpDesk_TaskDetail" ThisKey="DetailID" OtherKey="DetailID" Type="HelpDesk_TaskDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_Tasks" Member="HelpDesk_Tasks">
+    <Type Name="HelpDesk_Task">
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PortalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EstimatedStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EstimatedCompletion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AssignedRoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TicketPassword" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RequesterUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RequesterName" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="RequesterEmail" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="RequesterPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EstimatedHours" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HelpDesk_Task_HelpDesk_Log" Member="HelpDesk_Logs" ThisKey="TaskID" OtherKey="TaskID" Type="HelpDesk_Log" />
+      <Association Name="HelpDesk_Task_HelpDesk_TaskAssociation" Member="HelpDesk_TaskAssociations" ThisKey="TaskID" OtherKey="TaskID" Type="HelpDesk_TaskAssociation" />
+      <Association Name="HelpDesk_Task_HelpDesk_TaskCategory" Member="HelpDesk_TaskCategories" ThisKey="TaskID" OtherKey="TaskID" Type="HelpDesk_TaskCategory" />
+      <Association Name="HelpDesk_Task_HelpDesk_TaskDetail" Member="HelpDesk_TaskDetails" ThisKey="TaskID" OtherKey="TaskID" Type="HelpDesk_TaskDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_Roles" Member="HelpDesk_Roles">
+    <Type Name="HelpDesk_Role">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PortalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpDesk_LastSearch" Member="HelpDesk_LastSearches">
+    <Type Name="HelpDesk_LastSearch">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PortalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SearchText" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AssignedRoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Categories" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="CurrentPage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PageSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

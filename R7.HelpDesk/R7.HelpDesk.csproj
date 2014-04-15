@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B5BFA3B-BA1D-4266-ADA4-A1F6F227D768}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>R7.HelpDesk</RootNamespace>
+    <AssemblyName>R7.HelpDesk</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AspNet>
+      <AspNet DisableCodeBehindGeneration="True" />
+    </AspNet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AspNet>
+      <AspNet DisableCodeBehindGeneration="True" />
+    </AspNet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="DotNetNuke">
+      <HintPath>..\..\..\bin\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web">
+      <HintPath>..\..\..\bin\DotNetNuke.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.WebControls">
+      <HintPath>..\..\..\bin\DotNetNuke.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties VerifyCodeBehindFields="True" VerifyCodeBehindEvents="True">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Content Include="AdminSettings.ascx" />
+    <Content Include="EditTask.ascx" />
+    <Content Include="View.ascx" />
+    <Content Include="module.css" />
+    <Content Include="Controls\Comments.ascx" />
+    <Content Include="Controls\Logs.ascx" />
+    <Content Include="Controls\Tags.ascx" />
+    <Content Include="Controls\Work.ascx" />
+    <Content Include="images\application_side_contract.png" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\cog.png" />
+    <Content Include="images\dt-arrow-dn.png" />
+    <Content Include="images\dt-arrow-up.png" />
+    <Content Include="images\folder.png" />
+    <Content Include="images\GridSpacer.gif" />
+    <Content Include="images\group.png" />
+    <Content Include="images\layout.png" />
+    <Content Include="images\layout_add.png" />
+    <Content Include="images\magnifier.png" />
+    <Content Include="images\page_add.png" />
+    <Content Include="images\page_delete.png" />
+    <Content Include="images\sprite.png" />
+    <Content Include="images\table.png" />
+    <Content Include="images\tag.png" />
+    <Content Include="images\tag_blue.png" />
+    <Content Include="images\user_suit.png" />
+    <Content Include="images\world.png" />
+    <Content Include="images\world_delete.png" />
+    <Content Include="Upload\149_31OHXZ80GF.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminSettings.ascx.cs">
+      <DependentUpon>AdminSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTask.ascx.cs">
+      <DependentUpon>EditTask.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View.ascx.cs">
+      <DependentUpon>View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Comments.ascx.cs">
+      <DependentUpon>Comments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logs.ascx.cs">
+      <DependentUpon>Logs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tags.ascx.cs">
+      <DependentUpon>Tags.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Work.ascx.cs">
+      <DependentUpon>Work.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettings.ascx.designer.cs">
+      <DependentUpon>AdminSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View.ascx.designer.cs">
+      <DependentUpon>View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTask.ascx.designer.cs">
+      <DependentUpon>EditTask.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Comments.ascx.designer.cs">
+      <DependentUpon>Comments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logs.ascx.designer.cs">
+      <DependentUpon>Logs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tags.ascx.designer.cs">
+      <DependentUpon>Tags.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Work.ascx.designer.cs">
+      <DependentUpon>Work.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagsDropDown.cs" />
+    <Compile Include="Controls\TagsTable.cs" />
+    <Compile Include="Controls\TagsTree.cs" />
+    <Compile Include="components\Log.cs" />
+    <Compile Include="DAL\dnnHelpDeskDAL.designer.cs" />
+    <Compile Include="components\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="images\" />
+    <Folder Include="App_LocalResources\" />
+    <Folder Include="components\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controls\App_LocalResources\CommentsControl.ascx.resx" />
+    <None Include="Controls\App_LocalResources\WorkControl.ascx.resx" />
+    <None Include="images\FamFamIconsLicense.txt" />
+    <None Include="R7.HelpDesk.dnn" />
+    <None Include="App_LocalResources\AdminSettings.ascx.resx" />
+    <None Include="App_LocalResources\AdminSettings.ascx.ru-RU.resx" />
+    <None Include="App_LocalResources\EditTask.ascx.resx" />
+    <None Include="App_LocalResources\EditTask.ascx.ru-RU.resx" />
+    <None Include="App_LocalResources\View.ascx.resx" />
+    <None Include="App_LocalResources\View.ascx.ru-RU.resx" />
+    <None Include="DAL\dnnHelpDeskDAL.dbml" />
+    <None Include="DAL\dnnHelpDeskDAL.dbml.layout" />
+    <None Include="01.00.00.SqlDataProvider" />
+    <None Include="Uninstall.SqlDataProvider" />
+    <None Include="Controls\App_LocalResources\CommentsControl.ascx.ru-RU.resx" />
+    <None Include="Controls\App_LocalResources\WorkControl.ascx.ru-RU.resx" />
+    <None Include="Controls\App_LocalResources\Logs.ascx.resx" />
+    <None Include="Controls\App_LocalResources\Logs.ascx.ru-RU.resx" />
+    <None Include="License.txt" />
+    <None Include="ReleaseNotes.txt" />
+    <None Include="Package.cmd" />
+  </ItemGroup>
+</Project>

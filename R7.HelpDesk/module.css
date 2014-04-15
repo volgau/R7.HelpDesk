@@ -1,0 +1,88 @@
+﻿/* table level rules */
+.yui-grid
+{
+	border:1px solid #7f7f7f;
+    	border-collapse:collapse;
+}
+
+/* header column rules */
+.yui-grid th
+{
+    background:url(images/sprite.png) repeat-x 0px 0px;
+    border:1px solid #989898;
+    padding:2px 2px 2px 5px;
+    text-align:center;
+    vertical-align:top;
+}  
+
+.yui-grid th a
+{
+	font-weight:bold;
+	text-decoration:none;
+	text-align:center;
+    	color:#000;
+	display:block;
+    	padding-right:5px;
+}
+
+/* change the background image when the column is being sorted by */
+.yui-grid th.sortasc, .yui-grid th.sortdesc
+{
+    background:url(images/sprite.png) repeat-x 0px -100px;
+}  
+
+/* change image if it is an asc sort */
+.yui-grid th.sortasc a
+{
+    background:url(images/dt-arrow-up.png) no-repeat right 50%;
+}  
+
+/* change image if it is a desc sort */
+.yui-grid th.sortdesc a
+{
+    background:url(images/dt-arrow-dn.png) no-repeat right 50%;
+}  
+
+
+/* data cell and data row rules */
+.yui-grid td
+{
+    padding:2px 5px 2px 5px;
+    border-right: solid 1px #cbcbcb;
+    border-left: 1px solid #cbcbcb;
+}
+
+.yui-grid .altrow, .yui-grid .row .sort
+{
+    background-color:#edf5ff;
+} 
+
+.yui-grid .altrow .sort
+{
+    background-color:#dbeaff;
+} 
+
+.yui-grid .row
+{
+    background-color:#fff;
+}  
+
+.style1 { color:red; }
+
+.style5 { text-align: center; }
+
+.HelpDesk_MasterTable { width:100%; margin-bottom:10px }
+
+.HelpDesk_MasterTable table td { padding:2px; }
+
+.HelpDesk_ExistingTicketsTable, .HelpDesk_ExistingTicketsTable table { width:100% } 
+
+.HelpDesk_ExistingTicketsTable td {	padding:2px; }
+
+.HelpDesk_ExistingTicketsTable table { border-collapse:collapse; }
+
+.HelpDesk_ExistingTicketsTable th a { font-weight:bold; border:none; }
+
+.HelpDesk_NewTicketTable td { padding:4px; }
+
+.HelpDesk_Categories td:last-child { width:100% }
