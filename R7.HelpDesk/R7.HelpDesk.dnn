@@ -75,13 +75,13 @@
 
        <component type="Script">
          <scripts>
-           <basePath>DesktopModules\R7.HelpDesk\R7.HelpDesk</basePath>
+           <basePath>DesktopModules\R7.HelpDesk\R7.HelpDesk\SqlDataProvider</basePath>
            <script type="Install">
-             <name>01.00.00.SqlDataProvider</name>
+             <name>SqlDataProvider\01.00.00.SqlDataProvider</name>
              <version>01.00.00</version>
            </script>
            <script type="UnInstall">
-             <name>Uninstall.SqlDataProvider</name>
+             <name>SqlDataProvider\Uninstall.SqlDataProvider</name>
              <version>01.00.00</version>
            </script>
          </scripts>

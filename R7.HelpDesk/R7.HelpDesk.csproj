@@ -156,6 +156,7 @@
     <Folder Include="components\" />
     <Folder Include="DAL\" />
     <Folder Include="Upload\" />
+    <Folder Include="SqlDataProvider\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Controls\App_LocalResources\CommentsControl.ascx.resx" />
@@ -170,8 +171,6 @@
     <None Include="App_LocalResources\View.ascx.ru-RU.resx" />
     <None Include="DAL\dnnHelpDeskDAL.dbml" />
     <None Include="DAL\dnnHelpDeskDAL.dbml.layout" />
-    <None Include="01.00.00.SqlDataProvider" />
-    <None Include="Uninstall.SqlDataProvider" />
     <None Include="Controls\App_LocalResources\CommentsControl.ascx.ru-RU.resx" />
     <None Include="Controls\App_LocalResources\WorkControl.ascx.ru-RU.resx" />
     <None Include="Controls\App_LocalResources\Logs.ascx.resx" />
@@ -179,5 +178,7 @@
     <None Include="License.txt" />
     <None Include="ReleaseNotes.txt" />
     <None Include="Package.cmd" />
+    <None Include="SqlDataProvider\01.00.00.SqlDataProvider" />
+    <None Include="SqlDataProvider\Uninstall.SqlDataProvider" />
   </ItemGroup>
 </Project>
