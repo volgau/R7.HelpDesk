@@ -177,7 +177,6 @@
     <None Include="Controls\App_LocalResources\Logs.ascx.ru-RU.resx" />
     <None Include="License.txt" />
     <None Include="ReleaseNotes.txt" />
-    <None Include="Package.cmd" />
     <None Include="SqlDataProvider\01.00.00.SqlDataProvider" />
     <None Include="SqlDataProvider\Uninstall.SqlDataProvider" />
   </ItemGroup>
