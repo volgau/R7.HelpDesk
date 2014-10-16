@@ -1011,12 +1011,12 @@ namespace R7.HelpDesk
                 int TotalRecords = 0;
                 if (ddlSearchForUserType.SelectedValue == "Email")
                 {
-                    Users = UserController.GetUsersByEmail(PortalId, false, txtSearchForUser.Text + "%", 0, 5, ref TotalRecords);
+                    Users = UserController.GetUsersByEmail(PortalId, txtSearchForUser.Text + "%", 0, 5, ref TotalRecords);
                 }
                 else
                 {
                     String propertyName = ddlSearchForUserType.SelectedItem.Value;
-                    Users = UserController.GetUsersByProfileProperty(PortalId, false, propertyName, txtSearchForUser.Text + "%", 0, 5, ref TotalRecords);
+                    Users = UserController.GetUsersByProfileProperty(PortalId, propertyName, txtSearchForUser.Text + "%", 0, 5, ref TotalRecords);
                 }
                 if (Users.Count > 0)
                 {
@@ -1216,7 +1216,7 @@ namespace R7.HelpDesk
             if (!(UserInfo.IsInRole(GetAdminRole()) || UserInfo.IsInRole("Administrators") || UserInfo.IsSuperUser))
             {
                 RoleController objRoleController = new RoleController();
-				foreach (RoleInfo objRoleInfo in objRoleController.GetUserRoles(PortalId, UserId))
+				foreach (RoleInfo objRoleInfo in objRoleController.GetUserRoles(UserInfo, false))
                 {
                     UsersRoleIDs.Add(objRoleInfo.RoleID);
                 }
