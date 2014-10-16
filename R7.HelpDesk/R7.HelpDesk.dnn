@@ -2,18 +2,18 @@
  <packages>
    <package name="R7.HelpDesk" type="Module" version="01.00.00">
      <friendlyName>R7.HelpDesk</friendlyName>
-     <description>This is a simple module to display some records from database table.</description>
+     <description>Help desk (support desk, ticket tracker) module for DNN Platform, based on ADefHelpDesk code.</description>
      <owner>
        <name>Roman M. Yagodin</name>
-       <organization>R7 Solutions</organization>
-       <url>http://www.R7 Solutions.com/R7.HelpDesk</url>
+       <organization>R7.Solutions</organization>
+       <url>http://github.com/roman-yagodin/R7.HelpDesk</url>
        <email>roman.yagodin@gmail.com</email>
      </owner>
 	 <license src="License.txt" />
      <releaseNotes src="ReleaseNotes.txt" />
-     <!-- <dependencies>
-		<dependency type="CoreVersion">07.00.00</dependency>
-	</dependencies> -->
+     <dependencies>
+		<dependency type="CoreVersion">07.01.02</dependency>
+	</dependencies>
      <components>
 
         <component type="Module">
@@ -22,8 +22,8 @@
            <foldername>R7.HelpDesk</foldername>
            <businessControllerClass>R7.HelpDesk.HelpDeskController</businessControllerClass>
            <supportedFeatures>
-             <supportedFeature type="Portable" />
-             <supportedFeature type="Searchable" />
+           <!--  <supportedFeature type="Portable" />
+             <supportedFeature type="Searchable" /> -->
            </supportedFeatures>
            <moduleDefinitions>
              <moduleDefinition>
@@ -75,7 +75,7 @@
 
        <component type="Script">
          <scripts>
-           <basePath>DesktopModules\R7.HelpDesk\R7.HelpDesk\SqlDataProvider</basePath>
+           <basePath>DesktopModules\R7.HelpDesk\R7.HelpDesk</basePath>
            <script type="Install">
              <name>SqlDataProvider\01.00.00.SqlDataProvider</name>
              <version>01.00.00</version>
@@ -89,9 +89,9 @@
 
        <component type="ResourceFile">
          <resourceFiles>
-           <basePath>DesktopModules\R7.HelpDesk\R7.HelpDesk</basePath>
+           <basePath>DesktopModules\R7.HelpDesk</basePath>
            <resourceFile>
-             <name>R7.HelpDesk.zip</name>
+             <name>Resources.zip</name>
            </resourceFile>
          </resourceFiles>
        </component>
