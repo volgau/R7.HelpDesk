@@ -43,7 +43,7 @@
                    <viewOrder>0</viewOrder>
                  </moduleControl>
                  <moduleControl>
-                   <controlKey>Edit</controlKey>
+                   <controlKey>EditTask</controlKey>
                    <controlSrc>DesktopModules/R7.HelpDesk/R7.HelpDesk/EditTask.ascx</controlSrc>
                    <supportsPartialRendering>False</supportsPartialRendering>
                    <supportsPopUps>True</supportsPopUps>
