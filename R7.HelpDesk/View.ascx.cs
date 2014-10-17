@@ -1216,7 +1216,7 @@ namespace R7.HelpDesk
             if (!(UserInfo.IsInRole(GetAdminRole()) || UserInfo.IsInRole("Administrators") || UserInfo.IsSuperUser))
             {
                 RoleController objRoleController = new RoleController();
-				foreach (RoleInfo objRoleInfo in objRoleController.GetUserRoles(UserInfo, false))
+				foreach (RoleInfo objRoleInfo in objRoleController.GetUserRoles(UserInfo, true))
                 {
                     UsersRoleIDs.Add(objRoleInfo.RoleID);
                 }
