@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AdminSettings.ascx.cs" Inherits="R7.HelpDesk.AdminSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AdminSettings.ascx.cs" Inherits="R7.HelpDesk.AdminSettings" %>
 <asp:Panel ID="pnlAdminSettings" runat="server" align="left">
     <asp:Image ID="Image3" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/application_side_contract.png" />
     <asp:LinkButton ID="lnkBack" runat="server" resourcekey="lnkBack" Font-Underline="True"

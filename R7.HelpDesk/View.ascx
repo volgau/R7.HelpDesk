@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="View.ascx.cs" Inherits="R7.HelpDesk.View" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="View.ascx.cs" Inherits="R7.HelpDesk.View" %>
 <%@ Register Src="Controls/Tags.ascx" TagName="Tags" TagPrefix="uc1" %>
 
 <table class="HelpDesk_MasterTable">

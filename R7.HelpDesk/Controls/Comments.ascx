@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Comments.ascx.cs" Inherits="R7.HelpDesk.Comments" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Comments.ascx.cs" Inherits="R7.HelpDesk.Comments" %>
 <asp:Panel ID="pnlInsertComment" runat="server" 
     GroupingText="Insert New Comment" width="540px"
     Font-Size="X-Small" BorderStyle="None">

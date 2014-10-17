@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Work.ascx.cs" Inherits="R7.HelpDesk.Work" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Work.ascx.cs" Inherits="R7.HelpDesk.Work" %>
 <asp:Panel ID="pnlInsertComment" runat="server" GroupingText="Insert New Work" Width="540px"
     Font-Size="X-Small" BorderStyle="None">
     <table>

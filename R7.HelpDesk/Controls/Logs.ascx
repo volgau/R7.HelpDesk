@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Logs.ascx.cs" Inherits="R7.HelpDesk.Logs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Logs.ascx.cs" Inherits="R7.HelpDesk.Logs" %>
     <asp:LinqDataSource ID="LDSLogs" runat="server" 
         ContextTypeName="R7.HelpDesk.HelpDeskDALDataContext" 
         OrderBy="DateCreated desc" TableName="HelpDesk_Logs" 

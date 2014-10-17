@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EditTask.ascx.cs" Inherits="R7.HelpDesk.EditTask" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditTask.ascx.cs" Inherits="R7.HelpDesk.EditTask" %>
 <%@ Register Src="Controls/Tags.ascx" TagName="Tags" TagPrefix="uc1" %>
 <%@ Register Src="Controls/Comments.ascx" TagName="Comments" TagPrefix="uc2" %>
 <%@ Register Src="Controls/Logs.ascx" TagName="Logs" TagPrefix="uc3" %>
