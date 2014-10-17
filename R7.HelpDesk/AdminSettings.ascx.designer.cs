@@ -13,10 +13,10 @@ namespace R7.HelpDesk
 
 		protected Button btnAddNew;
 		protected Button btnUpdate;
-		protected HyperLink lnkAdminRole;
-		protected HyperLink lnkUploFilesPath;
-		protected HyperLink lnkTagsAdmin;
-		protected HyperLink lnkRoles;
+		protected LinkButton lnkAdminRole;
+		protected LinkButton lnkUploFilesPath;
+		protected LinkButton lnkTagsAdmin;
+		protected LinkButton lnkRoles;
 
 		protected DropDownList ddlAdminRole;
 		protected TextBox txtUploadedFilesPath;
