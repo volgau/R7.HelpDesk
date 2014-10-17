@@ -16,14 +16,14 @@ namespace R7.HelpDesk
 
 		protected CheckBox chkCommentVisible;
 		protected CheckBox chkCommentVisibleEdit;
-		protected HyperLink lnkDelete;
+		protected LinkButton lnkDelete;
 		protected Image Image5;
-		protected HyperLink lnkUpdate;
+		protected LinkButton lnkUpdate;
 		protected Image Image4;
 		protected Panel pnlDisplayFile;
 		protected Panel pnlAttachFile;
 		protected Image imgDelete;
-		protected HyperLink lnkUpdateRequestor;
+		protected LinkButton lnkUpdateRequestor;
 		protected Image ImgEmailUser;
 		protected Button btnInsertCommentAndEmail;
 
