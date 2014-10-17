@@ -40,11 +40,11 @@
     <tr>
         <td class="style1">
             <asp:Image ID="Image6" runat="server" 
-                ImageUrl="~/DesktopModules/R7.HelpDesk/images/GridSpacer.gif" 
+                ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/GridSpacer.gif" 
                 Visible="False" Width="34px" />
         </td>
         <td style="border: 1px solid #CCCCCC" align="center" Width="23px">
-            <asp:Image ID="Image1" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/World.png"
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/World.png"
                 AlternateText="Visible to Requestor" />
         </td>
         <td style="border: 1px solid #CCCCCC" align="center">
@@ -109,17 +109,17 @@
         <tr>
             <td valign="top" nowrap="nowrap">
                 <asp:Image ID="Image3" runat="server" 
-                    ImageUrl="~/DesktopModules/R7.HelpDesk/images/application_side_contract.png" />
+                    ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/application_side_contract.png" />
                 <asp:LinkButton ID="lnkBack" runat="server" Font-Underline="True" 
                     onclick="lnkBack_Click" Text="Back" resourcekey="lnkBack" />&nbsp;<asp:Image ID="Image4" 
-                    runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/page_add.png" />
+                    runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/page_add.png" />
                 <asp:LinkButton ID="lnkUpdate" runat="server" Text="Update" 
                     Font-Underline="True" onclick="lnkUpdate_Click" resourcekey="lnkUpdate" />
-                <asp:Image ID="ImgEmailUser" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/user_suit.png" /><asp:LinkButton 
+                <asp:Image ID="ImgEmailUser" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/user_suit.png" /><asp:LinkButton 
                     ID="lnkUpdateRequestor" runat="server" Font-Underline="True" 
                     onclick="lnkUpdateRequestor_Click" Text="Update and Email Requestor" resourcekey="lnkUpdateAndEmail" />
 &nbsp;<asp:Image ID="Image5" runat="server" 
-                    ImageUrl="~/DesktopModules/R7.HelpDesk/images/page_delete.png" />
+                    ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/page_delete.png" />
                 <asp:LinkButton ID="lnkDelete" runat="server" 
                     OnClientClick='if (!confirm("Are you sure you want to delete?") ){return false;}' 
                     Text="Delete" Font-Underline="True" onclick="lnkDelete_Click" resourcekey="lnkDelete" />
@@ -151,7 +151,7 @@
                       <asp:Label ID="lblAttachment" resourcekey="lblAttachment" runat="server" Font-Bold="True" 
                           Text="Attachment:" />
                       &nbsp;<asp:ImageButton ID="imgDelete" runat="server" 
-                          ImageUrl="~/DesktopModules/R7.HelpDesk/images/cancel.png" 
+                          ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/cancel.png" 
                           ToolTip="Delete Attachment" 
                           OnClientClick='if (!confirm("Are you sure you want to delete?") ){return false;}' 
                           onclick="imgDelete_Click" />

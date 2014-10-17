@@ -9,15 +9,15 @@
             <td valign="top"><table class="HelpDesk_MasterTable">
         <tr>
             <td>
-                <asp:Image ID="imgNewTicket" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/layout_add.png" />
+                <asp:Image ID="imgNewTicket" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/layout_add.png" />
                 <asp:LinkButton ID="lnkNewTicket" resourcekey="lnkNewTicket" runat="server" OnClick="lnkNewTicket_Click">New Ticket</asp:LinkButton>
             </td>
             <td>
-                <asp:Image ID="imgExitingTickets" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/layout.png" />
+                <asp:Image ID="imgExitingTickets" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/layout.png" />
                 <asp:LinkButton ID="lnkExistingTickets" resourcekey="lnkExistingTickets" runat="server" OnClick="lnkExistingTickets_Click">Existing Tickets</asp:LinkButton>
             </td>
             <td>
-                <asp:Image ID="imgAdministrator" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/cog.png" />
+                <asp:Image ID="imgAdministrator" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/cog.png" />
                 <asp:LinkButton ID="lnkAdministratorSettings" resourcekey="lnkAdministratorSettings" runat="server"
                     OnClick="lnkAdministratorSettings_Click">Administrator Settings</asp:LinkButton>
             </td>
@@ -82,7 +82,7 @@
                                 Text="Date Due:" /></b>
                             &nbsp;<b><asp:TextBox ID="txtDueDate" runat="server" Columns="8"></asp:TextBox>
                             </b>
-                            <asp:HyperLink ID="cmdtxtDueDateCalendar" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
+                            <asp:HyperLink ID="cmdtxtDueDateCalendar" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
@@ -138,12 +138,12 @@
                             <asp:Label ID="lbltxtStart" runat="server" resourcekey="lbltxtStart" 
                                 Text="Start:" />
 &nbsp;<asp:TextBox ID="txtStart" runat="server" Columns="8"></asp:TextBox>
-                                <asp:HyperLink ID="cmdtxtStartCalendar" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
+                                <asp:HyperLink ID="cmdtxtStartCalendar" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
                                 &nbsp;<asp:Label ID="lbltxtComplete" runat="server" 
                                 resourcekey="lbltxtComplete" Text="Complete:" />
                             &nbsp;<asp:TextBox ID="txtComplete" runat="server" Columns="8"></asp:TextBox>
                             </b>
-                            <asp:HyperLink ID="cmdtxtCompleteCalendar" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
+                            <asp:HyperLink ID="cmdtxtCompleteCalendar" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
                         </td>
                     </tr>
                 </table>
@@ -176,7 +176,7 @@
                 </asp:Panel>
     </table></td> <td valign="top"><p>
     <asp:Image ID="imgTags" runat="server" 
-                    ImageUrl="~/DesktopModules/R7.HelpDesk/images/tag_blue.png" />
+                    ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/tag_blue.png" />
     <b>
                 <asp:Label ID="lbltxtTags" runat="server" resourcekey="lbltxtTags" 
                     Text="Tags:" />

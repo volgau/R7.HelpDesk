@@ -326,7 +326,7 @@ namespace R7.HelpDesk
 
                 objHelpDesk_Setting2.PortalID = PortalId;
                 objHelpDesk_Setting2.SettingName = "UploFilesPath";
-                objHelpDesk_Setting2.SettingValue = Server.MapPath("~/DesktopModules/R7.HelpDesk/Upload");
+				objHelpDesk_Setting2.SettingValue = Server.MapPath("~/DesktopModules/R7.HelpDesk/R7.HelpDesk/Upload");
 
                 objHelpDeskDALDataContext.HelpDesk_Settings.InsertOnSubmit(objHelpDesk_Setting2);
                 objHelpDeskDALDataContext.SubmitChanges();

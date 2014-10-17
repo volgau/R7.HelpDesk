@@ -518,7 +518,7 @@ namespace R7.HelpDesk
 
                 objHelpDesk_Setting2.PortalID = PortalId;
                 objHelpDesk_Setting2.SettingName = "UploFilesPath";
-                objHelpDesk_Setting2.SettingValue = Server.MapPath("~/DesktopModules/R7.HelpDesk/Upload");
+				objHelpDesk_Setting2.SettingValue = Server.MapPath("~/DesktopModules/R7.HelpDesk/R7.HelpDesk/Upload");
 
                 objHelpDeskDALDataContext.HelpDesk_Settings.InsertOnSubmit(objHelpDesk_Setting2);
                 objHelpDeskDALDataContext.SubmitChanges();
@@ -1589,9 +1589,9 @@ namespace R7.HelpDesk
             // Check the sort direction to set the image URL accordingly.
             string imgUrl;
             if (SortDirection == "ASC")
-                imgUrl = "~/DesktopModules/R7.HelpDesk/images/dt-arrow-up.png";
+                imgUrl = "~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/dt-arrow-up.png";
             else
-                imgUrl = "~/DesktopModules/R7.HelpDesk/images/dt-arrow-dn.png";
+                imgUrl = "~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/dt-arrow-dn.png";
 
             // Check which field is being sorted
             // to set the visibility of the image controls.

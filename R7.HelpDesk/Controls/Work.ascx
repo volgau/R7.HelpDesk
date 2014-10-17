@@ -47,7 +47,7 @@
                         <td nowrap="nowrap">
                             <asp:TextBox ID="txtStartDay" runat="server" Columns="8"></asp:TextBox>
                             <b>
-                                <asp:HyperLink ID="cmdtxtStartCalendar1" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
+                                <asp:HyperLink ID="cmdtxtStartCalendar1" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
                             </b>
                         </td>
                         <td>
@@ -59,7 +59,7 @@
                         <td nowrap="nowrap">
                             <asp:TextBox ID="txtStopDay" runat="server" Columns="8"></asp:TextBox>
                             <b>
-                                <asp:HyperLink ID="cmdtxtStartCalendar2" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
+                                <asp:HyperLink ID="cmdtxtStartCalendar2" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
                             </b>
                         </td>
                         <td>
@@ -144,12 +144,12 @@
     <table>
         <tr>
             <td valign="top" nowrap="nowrap">
-                <asp:Image ID="Image3" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/application_side_contract.png" />
+                <asp:Image ID="Image3" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/application_side_contract.png" />
                 <asp:LinkButton ID="lnkBack" resourcekey="lnkBack" runat="server" Font-Underline="True" OnClick="lnkBack_Click" Text="Back" />&nbsp;<asp:Image
-                    ID="Image4" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/page_add.png" />
+                    ID="Image4" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/page_add.png" />
                 <asp:LinkButton ID="lnkUpdate" resourcekey="lnkUpdate" runat="server" Text="Update" Font-Underline="True"
                     OnClick="lnkUpdate_Click" />
-                &nbsp;<asp:Image ID="Image5" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/page_delete.png" />
+                &nbsp;<asp:Image ID="Image5" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/page_delete.png" />
                 <asp:LinkButton ID="lnkDelete" resourcekey="lnkDelete" runat="server" OnClientClick='if (!confirm("Are you sure you want to delete?") ){return false;}'
                     Text="Delete" Font-Underline="True" OnClick="lnkDelete_Click" />
             </td>
@@ -199,7 +199,7 @@
                         <td nowrap="nowrap">
                             <asp:TextBox ID="txtStartDayEdit" runat="server" Columns="8"></asp:TextBox>
                             <b>
-                                <asp:HyperLink ID="cmdtxtStartCalendar3" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
+                                <asp:HyperLink ID="cmdtxtStartCalendar3" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
                             </b>
                         </td>
                         <td>
@@ -211,7 +211,7 @@
                         <td nowrap="nowrap">
                             <asp:TextBox ID="txtStopDayEdit" runat="server" Columns="8"></asp:TextBox>
                             <b>
-                                <asp:HyperLink ID="cmdtxtStartCalendar4" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
+                                <asp:HyperLink ID="cmdtxtStartCalendar4" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/calendar.png"></asp:HyperLink>
                             </b>
                         </td>
                         <td>
