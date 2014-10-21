@@ -21,11 +21,7 @@
                 Text="Reset Search" resourcekey="lnkResetSearch" Visible="False" />
         </td>
         <td>
-            <asp:Image ID="imgAdministrator" runat="server" 
-                ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/cog.png" Visible="False" />
-            <asp:LinkButton ID="lnkAdministratorSettings" runat="server" Font-Underline="True"
-                OnClick="lnkAdministratorSettings_Click" Text="Administrator Settings" 
-                resourcekey="lnkAdministratorSettings" Visible="False" />
+        	<asp:HyperLink id="lnkAdministratorSettings" runat="server" resourcekey="lnkAdministratorSettings" CssClass="dnnSecondaryAction" Visible="false" />
         </td>
         <td>
             &nbsp;

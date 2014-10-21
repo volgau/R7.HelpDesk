@@ -165,6 +165,13 @@ namespace R7.HelpDesk
         }
         #endregion
 
+		protected override void OnInit (EventArgs e)
+		{
+			base.OnInit (e);
+
+			lnkAdministratorSettings.NavigateUrl = EditUrl ("AdminSettings");
+		}
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -289,8 +296,8 @@ namespace R7.HelpDesk
             if (UserInfo.IsInRole(strAdminRoleID) || UserInfo.IsInRole("Administrators") || UserInfo.IsSuperUser)
             {
                 lnkAdministratorSettings.Visible = true;
-                imgAdministrator.Visible = true;
-                TicketFileUpload.Visible = true;
+                
+				TicketFileUpload.Visible = true;
                 lblAttachFile.Visible = true;
 
                 // Show the Administrator user selector and Ticket Status selectors
@@ -308,8 +315,7 @@ namespace R7.HelpDesk
             {
                 // ** Non Administrators **
                 lnkAdministratorSettings.Visible = false;
-                imgAdministrator.Visible = false;
-
+                
                 // Do not show the Administrator user selector
                 pnlAdminUserSelection.Visible = false;
 
@@ -484,13 +490,6 @@ namespace R7.HelpDesk
             }
 
             return strUploadPermission;
-        }
-        #endregion
-
-        #region lnkAdministratorSettings_Click
-        protected void lnkAdministratorSettings_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(PortalSettings.ActiveTab.TabID, "AdminSettings", "mid=" + ModuleId.ToString()));
         }
         #endregion
 

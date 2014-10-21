@@ -15,8 +15,7 @@ namespace R7.HelpDesk
 		protected HyperLink lnkTaskID;
 
 		protected TextBox txtDueDate;
-		protected LinkButton lnkAdministratorSettings;
-		protected Image imgAdministrator;
+		protected HyperLink lnkAdministratorSettings;
 		protected FileUpload TicketFileUpload;
 		protected Label lblAttachFile;
 		protected Panel pnlAdminUserSelection;
