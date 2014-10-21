@@ -42,6 +42,8 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI;
 using Microsoft.VisualBasic;
 using DotNetNuke.Services.Localization;
+using DotNetNuke.Entities.Modules;
+using DotNetNuke.Entities.Modules.Actions;
 
 namespace R7.HelpDesk
 {
@@ -78,7 +80,7 @@ namespace R7.HelpDesk
     }
     #endregion
 
-    public partial class View : DotNetNuke.Entities.Modules.PortalModuleBase
+	public partial class View : PortalModuleBase, IActionable
     {
         #region SortExpression
         public string SortExpression
@@ -2041,6 +2043,34 @@ namespace R7.HelpDesk
             return strRoleName;
         }
         #endregion
+
+		#region IActionable implementation
+
+		public DotNetNuke.Entities.Modules.Actions.ModuleActionCollection ModuleActions
+		{
+			get
+			{
+				// create a new action to add an item, this will be added
+				// to the controls dropdown menu
+				var actions = new ModuleActionCollection ();
+				actions.Add
+				(
+					GetNextActionID (),
+					LocalizeString ("AdminSettings.Action"),
+					ModuleActionType.ModuleSettings,
+					"", "",
+					EditUrl ("AdminSettings"),
+					false,
+					DotNetNuke.Security.SecurityAccessLevel.Edit,
+					true,
+					false
+				);
+
+				return actions;
+			}
+		}
+
+		#endregion
 
         // Paging
 

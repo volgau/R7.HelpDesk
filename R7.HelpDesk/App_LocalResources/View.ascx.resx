@@ -117,7 +117,10 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="AdminUserSelectionGrouping.Text" xml:space="preserve">
+    <data name="AdminSettings.Action" xml:space="preserve">
+        <value>Administrator Settings</value>
+    </data>
+  <data name="AdminUserSelectionGrouping.Text" xml:space="preserve">
     <value>Select User</value>
   </data>
 	<data name="ANewHelpDeskTicket.Text" xml:space="preserve">
