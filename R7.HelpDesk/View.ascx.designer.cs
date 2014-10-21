@@ -11,7 +11,6 @@ namespace R7.HelpDesk
 		protected DropDownList ddlPageSize;
 		protected LinkButton lnkExistingTickets;
 		protected ListView lvTasks;
-		protected Image imgExitingTickets;
 		protected HyperLink lnkTaskID;
 
 		protected TextBox txtDueDate;

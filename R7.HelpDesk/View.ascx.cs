@@ -273,14 +273,12 @@ namespace R7.HelpDesk
             {
                 lnkExistingTickets.Visible = true;
                 lvTasks.Visible = true;
-                imgExitingTickets.Visible = true;
                 SetView("Existing Tickets");
             }
             else
             {
                 lnkExistingTickets.Visible = false;
                 lvTasks.Visible = false;
-                imgExitingTickets.Visible = false;
                 SetView("New Ticket");
             }
         }
@@ -626,8 +624,8 @@ namespace R7.HelpDesk
 
                 lnkNewTicket.Font.Bold = true;
                 lnkNewTicket.BackColor = System.Drawing.Color.LightGray;
-                lnkExistingTickets.Font.Bold = false;
-                lnkExistingTickets.BackColor = System.Drawing.Color.Transparent;
+                // lnkExistingTickets.Font.Bold = false;
+                // lnkExistingTickets.BackColor = System.Drawing.Color.Transparent;
 
                 DisplayNewTicketForm();
             }
@@ -642,8 +640,8 @@ namespace R7.HelpDesk
 
                 lnkNewTicket.Font.Bold = false;
                 lnkNewTicket.BackColor = System.Drawing.Color.Transparent;
-                lnkExistingTickets.Font.Bold = true;
-                lnkExistingTickets.BackColor = System.Drawing.Color.LightGray;
+                // lnkExistingTickets.Font.Bold = true;
+                // lnkExistingTickets.BackColor = System.Drawing.Color.LightGray;
 
                 DisplayExistingTickets(SearchCriteria);
             }

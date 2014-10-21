@@ -1,33 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="View.ascx.cs" Inherits="R7.HelpDesk.View" %>
 <%@ Register Src="Controls/Tags.ascx" TagName="Tags" TagPrefix="uc1" %>
 
-<table class="HelpDesk_MasterTable">
-    <tr>
-        <td>
-            <asp:Image ID="imgNewTicket" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/layout_add.png" />
-            <asp:LinkButton ID="lnkNewTicket" runat="server" BackColor="#CCCCCC" Font-Underline="True"
-                OnClick="lnkNewTicket_Click" Text="New Ticket" resourcekey="lnkNewTicket" />
-        </td>
-        <td>
-            <asp:Image ID="imgExitingTickets" runat="server" 
-                ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/layout.png" Visible="False" />
-            <asp:LinkButton ID="lnkExistingTickets" runat="server" Font-Underline="True" OnClick="lnkExistingTickets_Click"
-                Text="Existing Tickets" resourcekey="lnkExistingTickets" Visible="False" />
-        </td>
-        <td>
-            <asp:Image ID="imgMagnifier" runat="server" 
-                ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/magnifier.png" Visible="False" />
-            <asp:LinkButton ID="lnkResetSearch" runat="server" Font-Underline="True" OnClick="lnkResetSearch_Click"
-                Text="Reset Search" resourcekey="lnkResetSearch" Visible="False" />
-        </td>
-        <td>
-        	<asp:HyperLink id="lnkAdministratorSettings" runat="server" resourcekey="lnkAdministratorSettings" CssClass="dnnSecondaryAction" Visible="false" />
-        </td>
-        <td>
-            &nbsp;
-        </td>
-    </tr>
-</table>
+
+<div id="toolbar">
+	<asp:LinkButton ID="lnkNewTicket" runat="server" resourcekey="lnkNewTicket" CssClass="dnnPrimaryAction" OnClick="lnkNewTicket_Click" />	
+	<asp:HyperLink id="lnkAdministratorSettings" runat="server" resourcekey="lnkAdministratorSettings" CssClass="dnnSecondaryAction" Visible="false" />
+</div>
+
 <asp:Panel ID="pnlNewTicket" runat="server">
     <table>
         <tr>
@@ -250,6 +229,16 @@
         </h2>
     </div>
 </asp:Panel>
+
+<ul class="dnnAdminTabNav dnnClear">
+	<li class="ui-tabs-active">
+		<asp:LinkButton id="lnkExistingTickets" runat="server" resourcekey="lnkExistingTickets" OnClick="lnkExistingTickets_Click" Visible="false" />
+	</li>
+</ul>
+<asp:Image ID="imgMagnifier" runat="server" 
+                ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/magnifier.png" Visible="False" />
+            <asp:LinkButton ID="lnkResetSearch" runat="server" Font-Underline="True" OnClick="lnkResetSearch_Click"
+                Text="Reset Search" resourcekey="lnkResetSearch" Visible="False" />
 <asp:Panel ID="pnlExistingTickets" runat="server" Visible="False">
     <table class="HelpDesk_ExistingTicketsTable">
         <tr>
