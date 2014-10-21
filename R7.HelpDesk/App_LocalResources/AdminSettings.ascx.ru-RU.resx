@@ -180,7 +180,7 @@
 	<data name="lnkAdminRole.Text" xml:space="preserve">
     <value>Роль администратора</value>
   </data>
-	<data name="lnkBack.Text" xml:space="preserve">
+	<data name="linkReturn.Text" xml:space="preserve">
     <value>Назад</value>
   </data>
 	<data name="lnkRoles.Text" xml:space="preserve">

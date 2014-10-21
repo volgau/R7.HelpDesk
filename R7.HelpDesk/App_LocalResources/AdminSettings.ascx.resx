@@ -180,8 +180,8 @@
 	<data name="lnkAdminRole.Text" xml:space="preserve">
     <value>Administrator Role</value>
   </data>
-	<data name="lnkBack.Text" xml:space="preserve">
-    <value>Back</value>
+	<data name="linkReturn.Text" xml:space="preserve">
+    <value>Return</value>
   </data>
 	<data name="lnkRoles.Text" xml:space="preserve">
     <value>Assignment Roles</value>

@@ -40,6 +40,14 @@ namespace R7.HelpDesk
     public partial class AdminSettings : DotNetNuke.Entities.Modules.PortalModuleBase
     {
         List<int> colProcessedCategoryIDs;
+
+		protected override void OnInit (EventArgs e)
+		{
+			base.OnInit (e);
+
+			linkReturn.NavigateUrl = Globals.NavigateURL ();
+		}
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -131,13 +139,6 @@ namespace R7.HelpDesk
                 lnkRoles.Font.Bold = false;
                 lnkRoles.BackColor = Color.Transparent;
             }
-        }
-        #endregion
-
-        #region lnkBack_Click
-        protected void lnkBack_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(Globals.NavigateURL());
         }
         #endregion
 

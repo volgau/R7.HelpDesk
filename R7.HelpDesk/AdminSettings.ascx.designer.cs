@@ -17,6 +17,7 @@ namespace R7.HelpDesk
 		protected LinkButton lnkUploFilesPath;
 		protected LinkButton lnkTagsAdmin;
 		protected LinkButton lnkRoles;
+		protected HyperLink linkReturn;
 
 		protected DropDownList ddlAdminRole;
 		protected TextBox txtUploadedFilesPath;
