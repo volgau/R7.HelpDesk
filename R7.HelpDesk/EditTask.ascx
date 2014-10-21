@@ -6,26 +6,7 @@
 <asp:Panel ID="pnlEditTask" runat="server" HorizontalAlign="Left">
 <table>
 <tr>
-            <td valign="top"><table class="HelpDesk_MasterTable">
-        <tr>
-            <td>
-                <asp:Image ID="imgNewTicket" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/layout_add.png" />
-                <asp:LinkButton ID="lnkNewTicket" resourcekey="lnkNewTicket" runat="server" OnClick="lnkNewTicket_Click">New Ticket</asp:LinkButton>
-            </td>
-            <td>
-                <asp:Image ID="imgExitingTickets" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/layout.png" />
-                <asp:LinkButton ID="lnkExistingTickets" resourcekey="lnkExistingTickets" runat="server" OnClick="lnkExistingTickets_Click">Existing Tickets</asp:LinkButton>
-            </td>
-            <td>
-                <asp:Image ID="imgAdministrator" runat="server" ImageUrl="~/DesktopModules/R7.HelpDesk/R7.HelpDesk/images/cog.png" />
-                <asp:LinkButton ID="lnkAdministratorSettings" resourcekey="lnkAdministratorSettings" runat="server"
-                    OnClick="lnkAdministratorSettings_Click">Administrator Settings</asp:LinkButton>
-            </td>
-            <td>
-                &nbsp;&nbsp;
-            </td>
-        </tr>
-    </table>
+    <td valign="top">
     <table>
         <tr>
             <td valign="top" title="Ticket">

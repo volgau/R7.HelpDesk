@@ -28,12 +28,6 @@ namespace R7.HelpDesk
 		protected DropDownList ddlStatus;
 		protected DropDownList ddlPriority;
 
-		protected LinkButton lnkExistingTickets;
-		protected Image imgExitingTickets;
-
-		protected LinkButton lnkAdministratorSettings;
-		protected Image imgAdministrator;
-
 		protected Tags TagsTreeExistingTasks;
 		protected Image imgTags;
 		protected Label lbltxtTags;

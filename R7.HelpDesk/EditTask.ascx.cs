@@ -54,8 +54,6 @@ namespace R7.HelpDesk
                     CommentsControl.ViewOnly = true;
                     if (CheckSecurity())
                     {
-                        ShowAdministratorLink();
-                        ShowExistingTicketsLink();
                         LoadRolesDropDown();
                         DisplayCategoryTree();
                         DisplayTicketData();
@@ -224,63 +222,6 @@ namespace R7.HelpDesk
             }
 
             return boolPassedSecurity;
-        }
-        #endregion
-
-        #region lnkAdministratorSettings_Click
-        protected void lnkAdministratorSettings_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(PortalSettings.ActiveTab.TabID, "AdminSettings", "mid=" + ModuleId.ToString()));
-        }
-        #endregion
-
-        #region lnkNewTicket_Click
-        protected void lnkNewTicket_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(null, "Ticket=new"));
-        }
-        #endregion
-
-        #region lnkExistingTickets_Click
-        protected void lnkExistingTickets_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(), true);
-        }
-        #endregion
-
-        #region ShowExistingTicketsLink
-        private void ShowExistingTicketsLink()
-        {
-            // Show Existing Tickets link if user is logged in
-            if (UserId > -1)
-            {
-                lnkExistingTickets.Visible = true;
-                imgExitingTickets.Visible = true;
-            }
-            else
-            {
-                lnkExistingTickets.Visible = false;
-                imgExitingTickets.Visible = false;
-            }
-        }
-        #endregion
-
-        #region ShowAdministratorLink
-        private void ShowAdministratorLink()
-        {
-            // Get Admin Role
-            string strAdminRoleID = GetAdminRole();
-            // Show Admin link if user is an Administrator
-            if (UserInfo.IsInRole(strAdminRoleID) || UserInfo.IsInRole("Administrators") || UserInfo.IsSuperUser)
-            {
-                lnkAdministratorSettings.Visible = true;
-                imgAdministrator.Visible = true;
-            }
-            else
-            {
-                lnkAdministratorSettings.Visible = false;
-                imgAdministrator.Visible = false;
-            }
         }
         #endregion
 
