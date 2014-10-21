@@ -52,7 +52,7 @@
                    <iconFile />
                    <helpUrl />
                    <supportsPartialRendering>False</supportsPartialRendering>
-                   <supportsPopUps>False</supportsPopUps>
+                   <supportsPopUps>True</supportsPopUps>
                    <viewOrder>0</viewOrder>
                  </moduleControl>
                  <moduleControl>

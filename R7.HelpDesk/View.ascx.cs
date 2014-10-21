@@ -1492,7 +1492,8 @@ namespace R7.HelpDesk
 
             // Format the TaskID hyperlink
             lnkTaskID.Text = string.Format("{0}", objExistingTasks.TaskID.ToString());
-            lnkTaskID.NavigateUrl = DotNetNuke.Common.Globals.NavigateURL(PortalSettings.ActiveTab.TabID, "EditTask", "mid=" + ModuleId.ToString(), String.Format(@"&TaskID={0}", objExistingTasks.TaskID.ToString()));
+			lnkTaskID.NavigateUrl = EditUrl (TabId, "EditTask", false, "mid=" + ModuleId, "taskid=" + objExistingTasks.TaskID);
+
 
             // Format DueDate
             if (objExistingTasks.DueDate != null)
