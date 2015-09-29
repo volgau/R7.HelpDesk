@@ -52,17 +52,17 @@
     border-left: 1px solid #cbcbcb;
 }
 
-.yui-grid .altrow, .yui-grid .row .sort
+.yui-grid .yui-altrow, .yui-grid .yui-row .sort
 {
     background-color:#edf5ff;
 } 
 
-.yui-grid .altrow .sort
+.yui-grid .yui-altrow .sort
 {
     background-color:#dbeaff;
 } 
 
-.yui-grid .row
+.yui-grid .yui-row
 {
     background-color:#fff;
 }  

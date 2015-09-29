@@ -247,7 +247,7 @@
                     OnSorting="lvTasks_Sorting" OnItemCommand="lvTasks_ItemCommand" 
                     OnDataBound="lvTasks_DataBound" Visible="False">
                     <ItemTemplate>
-                        <tr class='<%# Container.DataItemIndex % 2 == 0 ? "row" : "altrow" %>'>
+                        <tr class='<%# Container.DataItemIndex % 2 == 0 ? "yui-row" : "yui-altrow" %>'>
                             <td align="center">
                                 <asp:HyperLink ID="lnkTaskID" runat="server" Text='<%# Eval("TaskID") %>' Font-Underline="True" />
                             </td>
