@@ -29,6 +29,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = R7.HelpDesk\R7.HelpDesk.csproj
+		version = 1.0.0
 	EndGlobalSection
 EndGlobal

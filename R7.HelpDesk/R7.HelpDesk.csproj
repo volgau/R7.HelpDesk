@@ -10,6 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>R7.HelpDesk</RootNamespace>
     <AssemblyName>R7.HelpDesk</AssemblyName>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -149,6 +150,7 @@
     <Compile Include="DAL\dnnHelpDeskDAL.designer.cs" />
     <Compile Include="components\Utils.cs" />
     <Compile Include="components\HelpDeskController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
@@ -158,6 +160,7 @@
     <Folder Include="DAL\" />
     <Folder Include="Upload\" />
     <Folder Include="SqlDataProvider\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Controls\App_LocalResources\CommentsControl.ascx.resx" />
