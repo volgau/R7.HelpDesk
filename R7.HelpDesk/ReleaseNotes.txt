@@ -1,4 +1,9 @@
-﻿<h3>Version 01.00.00</h3>
+﻿<h3>Version 1.1.0</h3>
+<ul>
+    <li>To be decribed...</li>
+</ul>
+
+<h3>Version 1.0.0</h3>
 <p>This is the initial release, based on <a href="http://adefhelpdesk.codeplex.com" target="_blank">ADefHelpDesk 2.11</a> code with some changes.</p>
 <ul>
 	<li>Added more MIME types for attached documents.</li>
