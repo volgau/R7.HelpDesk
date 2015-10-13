@@ -148,6 +148,7 @@
     <Compile Include="components\Log.cs" />
     <Compile Include="DAL\dnnHelpDeskDAL.designer.cs" />
     <Compile Include="components\Utils.cs" />
+    <Compile Include="components\HelpDeskController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
