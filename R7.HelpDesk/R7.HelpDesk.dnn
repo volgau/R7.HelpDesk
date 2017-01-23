@@ -9,8 +9,8 @@
        <url>http://github.com/roman-yagodin/R7.HelpDesk</url>
        <email>roman.yagodin@gmail.com</email>
      </owner>
-	 <license src="License.txt" />
-     <releaseNotes src="ReleaseNotes.txt" />
+	 <license src="license.htm" />
+     <releaseNotes src="releaseNotes.htm" />
      <dependencies>
 		<dependency type="CoreVersion">08.00.04</dependency>
 	</dependencies>

@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+    <!-- Import MSBuild.Community.Tasks -->
+    <Import Project="../packages/MSBuildTasks.1.5.0.235/tools/MSBuild.Community.Tasks.Targets" />
+    
+    <!-- Main properties -->
+    <PropertyGroup>
+        <PackageName>R7.HelpDesk</PackageName>
+        <PackageOutputPath>bin/Deploy</PackageOutputPath>
+        <TmpDir>bin/tmp</TmpDir>
+        <DnnLocalDeployPath Condition=" '$(OS)' == 'Unix' ">$(HOME)/mnt/dnn8</DnnLocalDeployPath>
+        <DnnLocalDeployPath Condition=" '$(OS)' != 'Unix' ">C:\Dotnetnuke804</DnnLocalDeployPath>
+        <BuildSettingsImported>true</BuildSettingsImported>
+    </PropertyGroup>
+
+    <!-- Derieved properties -->
+    <PropertyGroup>
+        <MainProjectPath>../$(PackageName)</MainProjectPath>
+        <MainProjectOutputPath>$(MainProjectPath)/bin/$(Configuration)</MainProjectOutputPath>
+    </PropertyGroup>
+</Project>
