@@ -1,5 +1,7 @@
 # About R7.HelpDesk
 
+[![BCH compliance](https://bettercodehub.com/edge/badge/roman-yagodin/R7.ImageHandler)](https://bettercodehub.com/)
+
 *R7.HelpDesk* is a basic help desk (support desk, ticket tracker) module for DNN Platform, based on [ADefHelpDesk] (http://adefhelpdesk.codeplex.com/) code.
 
 ## TODO
